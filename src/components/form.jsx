@@ -4,9 +4,17 @@ import Values from "values.js";
 export default function Form() {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
+  const [list, setList] = useState(new Values("#DAA520").all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    try {
+      let colors = new Values(color).all(10);
+      setList(colors);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
 
   return (
@@ -26,6 +34,7 @@ export default function Form() {
           </button>
         </form>
       </section>
+      <section></section>
     </>
   );
 }
