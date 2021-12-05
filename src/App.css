@@ -1,4 +1,4 @@
-/*
+/* /* 
 =============== 
 Variables
 ===============
@@ -57,20 +57,28 @@ Variables
   padding: 0;
   box-sizing: border-box;
 }
+
+html * {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  background-color: #ececec;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -83,35 +91,50 @@ h4 {
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
+.title {
+  font-size: 40px;
+  padding-bottom: 9px;
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -147,6 +170,7 @@ p {
   height: 100px;
   padding-left: 2rem;
 }
+
 .container h3 {
   margin-bottom: 0;
   margin-right: 2rem;
@@ -155,21 +179,28 @@ p {
 input {
   border-color: transparent;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
 }
+
 .btn {
   background: var(--clr-primary-5);
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+
   border-color: transparent;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  text-transform: capitalize;
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
   color: var(--clr-white);
   cursor: pointer;
+  font-size: 17px;
+  margin-left: 15px;
+  height: 35px;
+  width: 100px;
 }
+
 @media screen and (max-width: 576px) {
   .container h3 {
     font-size: 1rem;
@@ -179,32 +210,39 @@ input {
     font-size: 0.85rem;
   }
 }
+
 input.error {
   border: 2px solid var(--clr-red-dark);
 }
+
 .colors {
   min-height: calc(100vh - 100px);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
 }
+
 .color {
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1rem;
   text-transform: none;
 }
+
 .percent-value {
   margin-bottom: 0;
   color: var(--clr-grey-1);
 }
+
 .color-value {
   color: var(--clr-grey-1);
   margin-bottom: 0;
 }
+
 .color-light .color-value {
   color: var(--clr-white);
 }
+
 .color-light .percent-value {
   color: var(--clr-white);
 }
